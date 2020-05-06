@@ -16,7 +16,10 @@ Solution...
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        lst=[]
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i]==target-nums[j]:
-                    return [i,j]
+            x=target-nums[i]
+            if x not in lst:
+                lst.append(nums[i])
+            else:
+                return  [nums.index(x),i]
