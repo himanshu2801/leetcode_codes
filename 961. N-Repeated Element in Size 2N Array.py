@@ -18,12 +18,12 @@ Solution...
 """
 class Solution:
     def repeatedNTimes(self, A: List[int]) -> int:
-        A=sorted(A)
         i=0;
         n=len(A)
-        while i<n:
+        while i<n//2+1:
             temp=A.count(A[i])
             if temp==n//2:
                 return A[i]
             i=i+A.count(A[i])
+        
         
