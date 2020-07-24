@@ -24,6 +24,6 @@ class Solution:
             temp=A.count(A[i])
             if temp==n//2:
                 return A[i]
-            i=i+A.count(A[i])
+            i=i+1
         
         
